@@ -1,6 +1,10 @@
+import Content from "./Content.component";
+
 const MainLayout = () => {
   return (
-    <div className="text-2xl">MainLayout</div>
+    <div className="bg-lightGrey flex items-center justify-center h-[100vh]">        
+        <Content />
+    </div>
   )
 }
 
