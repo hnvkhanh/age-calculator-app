@@ -5,11 +5,6 @@ import Result from "./Result.component";
 import { InputDate } from './Input.component';
 
 type Props = {}
-// interface InputDate {
-//     day: number | string;
-//     month: number | string;
-//     year: number | string
-// }
 
 const Content = (props: Props) => {
     const [date, setDate] = useState<InputDate>({
@@ -24,7 +19,11 @@ const Content = (props: Props) => {
                 <hr className="w-full" /> {/* Horizontal line */}
                 <ArrowButton />
             </div>
-            <Result days={0} months={0} years={0} />
+            <Result
+                days={date.day != '' ? date.day : '--'}
+                months={date.month != '' ? date.month : '--'}
+                years={date.year != '' ? date.year : '--'}
+            />
         </div>
     )
 }
