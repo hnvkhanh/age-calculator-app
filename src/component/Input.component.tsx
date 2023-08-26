@@ -24,15 +24,26 @@ const Input = (props: Props) => {
             );
             return;
         }
-        
+
         const inputValue = event.target.value;
-        if (inputValue.length <= 2) {
-            props.setDate((prevState) =>
-            ({
-                ...prevState,
-                [event.target.id]: inputValue
-            })
-            );
+        if (props.label == 'year') {
+            if (inputValue.length <= 4) {
+                props.setDate((prevState) =>
+                ({
+                    ...prevState,
+                    [event.target.id]: inputValue
+                })
+                );
+            }
+        } else {
+            if (inputValue.length <= 2) {
+                props.setDate((prevState) =>
+                ({
+                    ...prevState,
+                    [event.target.id]: inputValue
+                })
+                );
+            }
         }
 
     };

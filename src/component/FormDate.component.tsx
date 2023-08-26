@@ -22,7 +22,7 @@ const FormDate = (props: Props) => {
         setDate={props.setDate}
       />
       <Input
-        placeholder='YY'
+        placeholder='YYYY'
         label='year'
         value={props.date.year}
         setDate={props.setDate}
