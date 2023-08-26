@@ -1,7 +1,7 @@
 type Props = {
     years: number | string,
     months: number | string,
-    days: number | string
+    days: number | string,    
 }
 
 const Result = (props: Props) => {
@@ -22,6 +22,7 @@ const Result = (props: Props) => {
         month = Math.floor((daysDifference - year * 365) / 30);
         day = daysDifference - year * 365 - month * 30;
     }
+    
     return (
         <div className='flex flex-col justify-center h-[50%] text-custom font-bold italic'>
             <div>

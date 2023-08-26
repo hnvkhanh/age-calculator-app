@@ -1,6 +1,16 @@
-const ArrowButton = () => {
+type Props = {
+    setTriger : React.Dispatch<React.SetStateAction<boolean>>
+}
+
+const ArrowButton = (props:Props) => {
+    const handleClick = () => {
+        props.setTriger(true);
+    }
     return (
-        <button className="bg-purple hover:bg-offBlack text-white font-bold p-3 rounded-full flex items-center absolute">
+        <button
+            onClick={handleClick}
+            className="bg-purple hover:bg-offBlack text-white font-bold p-3 rounded-full flex items-center absolute"
+        >
             <img
                 src={"/icon-arrow.svg"}
                 alt="Arrow Icon"

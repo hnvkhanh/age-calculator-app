@@ -10,11 +10,13 @@ type Props = {
     value: string | number,
     label: string,
     placeholder: string,
-    setDate: React.Dispatch<React.SetStateAction<InputDate>>
+    setDate: React.Dispatch<React.SetStateAction<InputDate>>,
+    setTriger : React.Dispatch<React.SetStateAction<boolean>>
 }
 
 const Input = (props: Props) => {
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        props.setTriger(false);
         if (event.target.value == '') {
             props.setDate((prevState) =>
             ({

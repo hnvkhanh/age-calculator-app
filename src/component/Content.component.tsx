@@ -7,6 +7,7 @@ import { InputDate } from './Input.component';
 type Props = {}
 
 const Content = (props: Props) => {
+    const [triger, setTriger] = useState(false);
     const [date, setDate] = useState<InputDate>({
         day: '',
         month: '',
@@ -14,15 +15,15 @@ const Content = (props: Props) => {
     })
     return (
         <div className="w-full h-[65vh] mx-2 p-7 mb-14 bg-white rounded-3xl rounded-br-[100px]">
-            <FormDate date={date} setDate={setDate} />
+            <FormDate date={date} setDate={setDate} setTriger={setTriger}/>
             <div className="flex flex-col items-center justify-center my-8">
                 <hr className="w-full" /> {/* Horizontal line */}
-                <ArrowButton />
+                <ArrowButton setTriger={setTriger}/>
             </div>
-            <Result
-                days={date.day != '' ? date.day : '--'}
-                months={date.month != '' ? date.month : '--'}
-                years={date.year != '' ? date.year : '--'}
+            <Result                
+                days={triger ? date.day : '--'}
+                months={triger ? date.month : '--'}
+                years={triger ? date.year : '--'}
             />
         </div>
     )

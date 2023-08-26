@@ -2,7 +2,8 @@ import Input, { InputDate } from './Input.component';
 
 type Props = {
   date: InputDate,
-  setDate: React.Dispatch<React.SetStateAction<InputDate>>
+  setDate: React.Dispatch<React.SetStateAction<InputDate>>,
+  setTriger : React.Dispatch<React.SetStateAction<boolean>>
 }
 
 const FormDate = (props: Props) => {
@@ -14,18 +15,21 @@ const FormDate = (props: Props) => {
         label='day'
         value={props.date.day}
         setDate={props.setDate}
+        setTriger={props.setTriger}
       />
       <Input
         placeholder='MM'
         label='month'
         value={props.date.month}
         setDate={props.setDate}
+        setTriger={props.setTriger}
       />
       <Input
         placeholder='YYYY'
         label='year'
         value={props.date.year}
         setDate={props.setDate}
+        setTriger={props.setTriger}
       />
     </form>
   )
