@@ -71,11 +71,14 @@ const Input = (props: Props) => {
     };
     return (
         <div className="flex flex-col w-[28%]">
-            <label>{props.label.toUpperCase()}</label>
+            <label className={`${props.error !== 'valid' && "text-lightRed"}`}>
+                {props.label.toUpperCase()}
+            </label>
             <input
                 type="number"
                 placeholder={props.placeholder}
-                className="border-2 border-lightGrey rounded-md p-3 text-offBlack"
+                className={`border-2 rounded-md p-3 text-offBlack 
+                            ${props.error === 'valid' ? "border-lightGrey" : "border-lightRed"}`}
                 id={props.label}
                 onChange={handleChange}
                 value={props.value}
