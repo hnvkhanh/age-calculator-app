@@ -62,7 +62,7 @@ Users should be able to:
 
 ### What I learned
 
-In this project, I have the opportunity to apply and enhance my understanding of TypeScript, allowing me to become more accustomed to its fundamental concept of typing.
+In this project, I have the opportunity to apply and enhance my understanding of TypeScript, allowing me to become more accustomed to its fundamental concept of typing. I am attempting to create a custom class using Tailwind CSS.
 
 Additionally, I have the opportunity to reinforce my comprehension of state management in ReactJS through practical application.
 
