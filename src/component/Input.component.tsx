@@ -1,18 +1,6 @@
 import React from 'react'
+import { InputDate, KeyOfErrorContent } from '../untils/types';
 
-export interface InputDate {
-    day: string;
-    month: string;
-    year: string
-}
-export type KeyOfErrorContent = (
-    'invalidDate'
-    | 'invalidYear'
-    | 'invalidMonth'
-    | 'invalidDay'
-    | 'emptyField'
-    | 'valid'
-);
 
 type Props = {
     value: string | number,
@@ -31,7 +19,6 @@ const ErrorContent = {
     emptyField: "This field is required",
     valid: ""
 };
-
 
 
 const Input = (props: Props) => {

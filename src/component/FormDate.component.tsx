@@ -1,10 +1,7 @@
-import Input, { InputDate, KeyOfErrorContent } from './Input.component';
+import { InputDate, ReturnedErrors } from "../untils/types"
+import Input from "./Input.component"
 
-export type ReturnedErrors = {
-  day : KeyOfErrorContent,
-  month : KeyOfErrorContent,
-  year : KeyOfErrorContent,
-}
+
 
 type Props = {
   date: InputDate,

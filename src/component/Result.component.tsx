@@ -25,8 +25,8 @@ const Result = (props: Props) => {
     }
     
     return (
-        <div className='flex flex-col justify-center h-[50%] text-custom md:text-[75px] font-extrabold italic'>
-            <div className="md:mb-[-40px]">
+        <div className='flex flex-col justify-center h-[50%] text-custom lg:text-[75px] font-extrabold italic'>
+            <div className="lg:mb-[-40px]">
                 <span className='text-purple'>
                     {`${daysDifference == -1 ? '--' : year} `}
                 </span>
@@ -38,7 +38,7 @@ const Result = (props: Props) => {
                 </span>
                 months
             </div>
-            <div className="md:mt-[-40px]">
+            <div className="lg:mt-[-40px]">
                 <span className='text-purple' >
                     {`${daysDifference == -1 ? '--' : day} `}
                 </span>

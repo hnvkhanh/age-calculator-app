@@ -1,6 +1,6 @@
 import { SetStateAction } from 'react';
-import { ReturnedErrors } from "./FormDate.component";
-import { InputDate } from "./Input.component";
+import { InputDate, ReturnedErrors } from '../untils/types';
+
 
 type Props = {
     errors: ReturnedErrors,
@@ -76,7 +76,7 @@ const ArrowButton = (props: Props) => {
     return (
         <button
             onClick={handleClick}
-            className="bg-purple hover:bg-offBlack text-white font-bold p-3 md:p-5 rounded-full flex items-center absolute"
+            className="bg-purple hover:bg-offBlack text-white font-bold p-3 lg:p-5 rounded-full flex items-center absolute"
         >
             <img
                 src={"/icon-arrow.svg"}
