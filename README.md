@@ -1,27 +1,82 @@
-# React + TypeScript + Vite
+# Frontend Mentor - Age calculator app solution
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a solution to the [Age calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/age-calculator-app-dF9DFFpj-Q). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-Currently, two official plugins are available:
+## Table of contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-## Expanding the ESLint configuration
+**Note: Delete this note and update the table of contents based on what sections you keep.**
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Overview
 
-- Configure the top-level `parserOptions` property like this:
+### The challenge
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+Users should be able to:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- View an age in years, months, and days after submitting a valid date through the form
+- Receive validation errors if:
+  - Any field is empty when the form is submitted
+  - The day number is not between 1-31
+  - The month number is not between 1-12
+  - The year is in the future
+  - The date is invalid e.g. 31/04/1991 (there are 30 days in April)
+- View the optimal layout for the interface depending on their device's screen size
+- See hover and focus states for all interactive elements on the page
+- **Bonus**: See the age numbers animate to their final number when the form is submitted
+
+### Screenshot
+
+#### Desktop
+![](./screenshot.png)
+#### Mobile
+![](./screenshot-mobile.png)
+
+
+### Links
+
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+
+## My process
+
+### Built with
+
+- Mobile-first workflow
+- Tailwind CSS
+- TypeScript
+- [React](https://reactjs.org/) - JS library
+- [Vite](https://vitejs.dev/)
+
+
+
+### What I learned
+
+In this project, I have the opportunity to apply and enhance my understanding of TypeScript, allowing me to become more accustomed to its fundamental concept of typing.
+
+Additionally, I have the opportunity to reinforce my comprehension of state management in ReactJS through practical application.
+
+Furthermore, I am also gaining a stronger grasp of handling and utilizing props effectively.
+
+
+### Continued development
+
+Certain aspects of responsiveness are not fully optimized at the moment. I am still in the process of determining the most suitable approach for creating animations when the results change. Additionally, I've encountered a challenge in altering the input border while it's in focus. 
+Moving forward, my objective is to devise effective solutions for these issues and implement them successfully.
+
+
+## Author
+
+- Frontend Mentor - [@hnvkhanh](https://www.frontendmentor.io/profile/hnvkhanh)
+
+
