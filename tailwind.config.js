@@ -16,7 +16,7 @@ export default {
         poppins: ["Poppins"],
       },
       fontSize: {
-       custom: '42px'        
+       custom: '48px'        
       },
     },
   },

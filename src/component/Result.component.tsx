@@ -24,7 +24,7 @@ const Result = (props: Props) => {
     }
     
     return (
-        <div className='flex flex-col justify-center h-[50%] text-custom font-bold italic'>
+        <div className='flex flex-col justify-center h-[50%] text-custom font-extrabold italic'>
             <div>
                 <span className='text-purple'>
                     {`${daysDifference == -1 ? '--' : year} `}

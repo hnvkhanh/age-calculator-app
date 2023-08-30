@@ -1,37 +1,48 @@
-import Input, { InputDate } from './Input.component';
+import Input, { InputDate, KeyOfErrorContent } from './Input.component';
+
+export type ReturnedErrors = {
+  day : KeyOfErrorContent,
+  month : KeyOfErrorContent,
+  year : KeyOfErrorContent,
+}
 
 type Props = {
   date: InputDate,
+  errors :ReturnedErrors,  
   setDate: React.Dispatch<React.SetStateAction<InputDate>>,
-  setTriger : React.Dispatch<React.SetStateAction<boolean>>
+  setTriger: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-const FormDate = (props: Props) => {
 
-  return (
-    <form className="flex items-center justify-center py-5 gap-x-5 text-smokeyGrey font-bold">
-      <Input
-        placeholder='DD'
-        label='day'
-        value={props.date.day}
-        setDate={props.setDate}
-        setTriger={props.setTriger}
-      />
-      <Input
-        placeholder='MM'
-        label='month'
-        value={props.date.month}
-        setDate={props.setDate}
-        setTriger={props.setTriger}
-      />
-      <Input
-        placeholder='YYYY'
-        label='year'
-        value={props.date.year}
-        setDate={props.setDate}
-        setTriger={props.setTriger}
-      />
-    </form>
+const FormDate = (props: Props) => {  
+
+  return (    
+      <form className="flex items-start justify-center py-5 gap-x-5 text-smokeyGrey font-bold">
+        <Input
+          placeholder='DD'
+          label='day'
+          value={props.date.day}
+          setDate={props.setDate}
+          setTriger={props.setTriger}
+          error={props.errors.day}
+        />
+        <Input
+          placeholder='MM'
+          label='month'
+          value={props.date.month}
+          setDate={props.setDate}
+          setTriger={props.setTriger}
+          error={props.errors.month}
+        />
+        <Input
+          placeholder='YYYY'
+          label='year'
+          value={props.date.year}
+          setDate={props.setDate}
+          setTriger={props.setTriger}
+          error={props.errors.year}
+        />        
+      </form >
   )
 }
 
