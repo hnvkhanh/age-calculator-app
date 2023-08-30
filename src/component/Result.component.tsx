@@ -1,7 +1,7 @@
 type Props = {
-    years: number | string,
-    months: number | string,
-    days: number | string,    
+    years: string,
+    months: string,
+    days: string,    
 }
 
 const Result = (props: Props) => {
@@ -10,12 +10,13 @@ const Result = (props: Props) => {
     let month = -1;
     let day = -1;
     const getDateDifference = (startDate: Date, endDate: Date): number => {
-        const timeDifference = endDate.getTime() - startDate.getTime();
+        const timeDifference = endDate.getTime() - startDate.getTime();        
         const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
         return daysDifference
     }
     if (props.years != '--' && props.months != '--' && props.days != '--') {
-        const inputDate = new Date(props.years + '-' + props.months + '-' + props.days);
+        const inputDate = new Date(props.years.padStart(4, '0') + '-' + props.months.padStart(2, '0') + '-' + props.days);
+        console.log(inputDate)
         const currentDate = new Date();
         daysDifference = getDateDifference(inputDate, currentDate);
         year = Math.floor(daysDifference / 365);
