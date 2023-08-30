@@ -4,9 +4,7 @@ import FormDate, { ReturnedErrors } from "./FormDate.component";
 import Result from "./Result.component";
 import { InputDate } from './Input.component';
 
-type Props = {}
-
-const Content = (props: Props) => {
+const Content = () => {
     const [triger, setTriger] = useState(false);
     const [date, setDate] = useState<InputDate>({
         day: '',
