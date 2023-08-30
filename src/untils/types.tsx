@@ -10,6 +10,7 @@ export type KeyOfErrorContent = (
     | 'invalidDay'
     | 'emptyField'
     | 'valid'
+    | 'empty'
 );
 
 export type ReturnedErrors = {

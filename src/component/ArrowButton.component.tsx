@@ -59,8 +59,10 @@ const ArrowButton = (props: Props) => {
             valid = false;
             buffer.year = 'emptyField';
         }
-        if (!isValidDate(year, month, day) && props.date.day.length > 0) {
+        if (!isValidDate(year, month, day) && props.date.day.length > 0  && valid) {
             buffer.day = 'invalidDate';
+            buffer.month = 'empty';
+            buffer.year = 'empty';
             valid = false;
         }
 

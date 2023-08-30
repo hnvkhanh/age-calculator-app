@@ -17,7 +17,8 @@ const ErrorContent = {
     invalidMonth: "Must be a vavlid month",
     invalidYear: "Must be in the past",
     emptyField: "This field is required",
-    valid: ""
+    valid: "",
+    empty: ""
 };
 
 
