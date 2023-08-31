@@ -65,7 +65,7 @@ const Input = (props: Props) => {
             <input
                 type="number"
                 placeholder={props.placeholder}
-                className={`border-2 rounded-md p-3 text-offBlack 
+                className={`border-2 rounded-md p-3 text-offBlack focus:border-purple focus:outline-none
                             ${props.error === 'valid' ? "border-lightGrey" : "border-lightRed"}`}
                 id={props.label}
                 onChange={handleChange}
